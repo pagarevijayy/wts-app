@@ -13,12 +13,14 @@ import { environment } from '../environments/environment';
 // components
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
+import { TheScrollComponent } from './components/the-scroll/the-scroll.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent
+    MainNavComponent,
+    TheScrollComponent
   ],
   imports: [
     BrowserModule,

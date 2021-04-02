@@ -4,7 +4,7 @@
       *ngIf="isHandset$ | async">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-    <span class="logo-font px-2">Eragap Co.</span>
+    <span class="logo-font px-2">{{projectName}}</span>
     <span style="flex: 1 1 auto;"></span>
     <button mat-icon-button aria-label="icon-button with share icon">
       <mat-icon>share</mat-icon>
@@ -15,14 +15,17 @@
   <mat-sidenav #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [style.paddingTop.px]="(isHandset$ | async) ? 56 : 64" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#">Discipline</a>
+      <a mat-list-item href="#">The Scroll</a>
+      <a mat-list-item href="#">Community</a>
+      <a mat-list-item href="#">Recommended Books</a>
+      <a mat-list-item href="#">Other</a>
     </mat-nav-list>
+
     <div class="brand-tag pt-2 py-3">
-      <span class="d-block secondary-text fs-12">Created with ❤️ from India </span>
+      <span class="d-block secondary-text fs-12">Crafted with ❤️ in India </span>
       <span class="d-block secondary-text fs-12 pt-2 cursor-pointer" (click)="poweredByEragapTech()"> <small
           style="font-size: 8px;">Powered by</small> Eragap Tech Company</span>
     </div>
