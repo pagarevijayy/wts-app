@@ -11,14 +11,13 @@ import { SourceOfTruth} from 'src/assets/data/in-browser-data';
 export class MainNavComponent implements OnInit {
 
   isHandset$: Observable<boolean> = this._utilService.isHandset$;
-  projectName: string = SourceOfTruth.projectName;
+  toolbarTitle: string = SourceOfTruth.projectData.projectMainToolBarTitle ;
 
   constructor(
     private _utilService: UtilsService,
   ) { }
 
   ngOnInit(): void {
-    console.log(this.projectName);
   }
 
   poweredByEragapTech(){

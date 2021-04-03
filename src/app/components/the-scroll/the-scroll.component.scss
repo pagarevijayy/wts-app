@@ -28,3 +28,27 @@
   }
 
 }
+
+.action-gesture {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+
+  .gesture-button {
+    color: #666666;
+    border-radius: 8px;
+    min-width: 36px;
+    padding: 0;
+
+    &:active {
+      color: #333333;
+    }
+  }
+
+  .click-effect{
+    background-color: #f0f0f0;
+    color: #333333;
+  }
+
+}
