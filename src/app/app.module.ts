@@ -14,13 +14,21 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { TheScrollComponent } from './components/the-scroll/the-scroll.component';
+import { DisciplineComponent } from './components/discipline/discipline.component';
+import { CommunityComponent } from './components/community/community.component';
+import { RecommendedBooksComponent } from './components/recommended-books/recommended-books.component';
+import { OtherComponent } from './components/other/other.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
-    TheScrollComponent
+    TheScrollComponent,
+    DisciplineComponent,
+    CommunityComponent,
+    RecommendedBooksComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,
