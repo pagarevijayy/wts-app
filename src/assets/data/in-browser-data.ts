@@ -1,3 +1,5 @@
 export class SourceOfTruth {
-    static projectName: string = "#wethesapiens";
+    static projectData: any = {
+        projectMainToolBarTitle: "#wethesapiens"
+    }
 }
