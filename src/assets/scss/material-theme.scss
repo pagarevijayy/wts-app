@@ -7,7 +7,7 @@
 // `headlines` and `body-1` levels.
 $custom-typography: mat-typography-config($font-family: 'Poppins, monospace',
   $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500));
+  $body-1: mat-typography-level(14px, 24px, 500));
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
