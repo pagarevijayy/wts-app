@@ -17,15 +17,32 @@
     [opened]="(isHandset$ | async) === false">
 
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['/discipline']" >Discipline</a>
-      <a mat-list-item [routerLink]="['/scroll']" >The Scroll</a>
-      <a mat-list-item [routerLink]="['/community']" >Community</a>
-      <a mat-list-item [routerLink]="['/recommended-books']" >Recommended Books</a>
-      <a mat-list-item [routerLink]="['/other']" >Other</a>
+      <a mat-list-item [routerLink]="['/discipline']">Discipline</a>
+      <a mat-list-item [routerLink]="['/scroll']">The Scroll</a>
+      <a mat-list-item [routerLink]="['/community']">Community</a>
+      <a mat-list-item [routerLink]="['/recommended-books']">Recommended Books</a>
+      <a mat-list-item [routerLink]="['/other']">Other</a>
     </mat-nav-list>
 
     <div class="brand-tag pt-2 py-3">
-      <span class="d-block secondary-text fs-12">Crafted with ❤️ in India </span>
+      <div class="d-block py-2 social-tags">
+        <span class="px-2">
+          <a href="https://www.facebook.com/wethesapiens" target="_blank">
+            <i class="fa fa-facebook cursor-pointer"></i>
+          </a>
+        </span>
+        <span class="px-2">
+          <a href="https://www.instagram.com/wethesapiens_" target="_blank">
+            <i class="fa fa-instagram cursor-pointer"></i>
+          </a>
+        </span>
+        <span class="px-2">
+          <a href="https://www.twitter.com/wethesapiens" target="_blank">
+            <i class="fa fa-twitter cursor-pointer"></i>
+          </a>
+        </span>
+      </div>
+      <span class="d-block secondary-text fs-12 pt-2">Crafted with ❤️ in India </span>
       <span class="d-block secondary-text fs-12 pt-2 cursor-pointer" (click)="poweredByEragapTech()"> <small
           style="font-size: 8px;">Powered by</small> Eragap Tech Company</span>
     </div>
