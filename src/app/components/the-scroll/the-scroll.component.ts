@@ -76,15 +76,16 @@ export class TheScrollComponent implements OnInit {
     // console.log('indexOfCurrenView', indexOfCurrenView);
 
     switch (action) {
-      case "gotoPreviousView":
-        // console.log('goto previous view clicked!');
+      case "gotoNextView":
+        // console.log('goto next view clicked!');
         this.swipe(indexOfCurrenView, this.SWIPE_ACTION.LEFT)
         break;
 
-      case "gotoNextView":
-        // console.log('goto next view clicked!');
+      case "gotoPreviousView":
+        // console.log('goto previous view clicked!');
         this.swipe(indexOfCurrenView, this.SWIPE_ACTION.RIGHT)
         break;
+
 
       default:
         break;
@@ -105,13 +106,13 @@ export class TheScrollComponent implements OnInit {
     const keyPressed = event.key;
 
     switch (keyPressed) {
-      case 'ArrowLeft':
-        this.previousView.nativeElement.click();
+      case 'ArrowRight':
+        this.nextView.nativeElement.click();
 
         break;
 
-      case 'ArrowRight':
-        this.nextView.nativeElement.click();
+      case 'ArrowLeft':
+        this.previousView.nativeElement.click();
 
         break;
 
