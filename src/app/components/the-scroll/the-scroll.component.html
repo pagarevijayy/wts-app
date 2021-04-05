@@ -1,24 +1,24 @@
 <div class="the-scroll-wrapper">
 
-  <div class="scroll">
+  <div class="scroll" *ngFor="let view of viewContent; let i=index" (swipeleft)="swipe(i, $event.type)"
+    (swiperight)="swipe(i, $event.type)" [view.visible]="view.visible" [class.hidden]="!view.visible">
     <div class="scroll-picture">
-      <img src="https://pbs.twimg.com/media/ExGzBl_UUAA3qIS?format=jpg&name=medium" alt="author-image">
+      <img [src]="view.viewImage" [alt]="view.viewAuthor">
     </div>
     <div class="scroll-content">
-      <span class="d-block fs-18">"There’s nothing quite as frightening as someone who knows they are right." </span>
-      <span class="d-block py-3 fs-14"> – Michael Faraday</span>
-      <span class="d-block pt-5 fs-12 secondary-text"> Michael Faraday FRS was an English scientist who contributed to
-        the study of electromagnetism and electrochemistry.</span>
+      <span class="d-block fs-18"> {{view.viewPrimaryContent}} </span>
+      <span class="d-block py-3 fs-14"> – {{view.viewAuthor}} </span>
+      <span class="d-block pt-5 fs-12 secondary-text"> {{view.viewSecondaryContent}}</span>
     </div>
   </div>
 
   <div class="action-gesture">
     <!-- refactor: this should be a reusable component -->
-    <button class="gesture-button" #leftChevron mat-button (click)="changePageView('gotoPreviousView')">
+    <button class="gesture-button" #leftChevron mat-button (click)="changePageViewButtonClick('gotoPreviousView')">
       <mat-icon>chevron_left</mat-icon>
     </button>
 
-    <button class="gesture-button"#rightChevron mat-button (click)="changePageView('gotoNextView')">
+    <button class="gesture-button" #rightChevron mat-button (click)="changePageViewButtonClick('gotoNextView')">
       <mat-icon>chevron_right</mat-icon>
     </button>
   </div>
