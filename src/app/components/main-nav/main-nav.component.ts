@@ -20,6 +20,12 @@ export class MainNavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toolbarTitleClicked(){
+    // window.scroll({top: 0, left: 0, behavior: 'smooth'});
+    // document.body.scrollTop = 0;
+    // console.log('toolbar title clicked');
+  }
+
   poweredByEragapTech(){
     window.open(`https://eragap.co.in`, "_blank");
   }

@@ -30,7 +30,9 @@
   &-content {
     flex: 1;
     padding: 1em;
-    max-height: 100vh;
+    overflow-y: auto;
+    touch-action: pan-y !important;
+    margin-bottom: 3em;
   }
 
 }
@@ -46,6 +48,7 @@
     border-radius: 8px;
     min-width: 36px;
     padding: 0;
+    background-color: rgba($color: #fafafa, $alpha: 0.5);
 
     &:active {
       color: #333333;
