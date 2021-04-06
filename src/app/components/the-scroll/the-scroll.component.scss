@@ -1,7 +1,7 @@
 .scroll {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   min-height: calc(100vh - 64px);
   padding: 1em;
 
@@ -9,12 +9,17 @@
     flex-direction: column;
     justify-content: normal;
     min-height: calc(100vh - 56px);
-    padding: 1em;
+    padding: 0.5em;
   }
 
   &-picture {
-    max-width: 570px;
+    flex: 1;
     padding: 1em;
+
+    @media only screen and (max-width: 600px) {
+      max-width: 415px;
+      flex: unset;
+    }
 
     img {
       width: 100%;
@@ -23,8 +28,9 @@
   }
 
   &-content {
+    flex: 1;
     padding: 1em;
-    font-size: 1.5em;
+    max-height: 100vh;
   }
 
 }
@@ -46,7 +52,7 @@
     }
   }
 
-  .click-effect{
+  .click-effect {
     background-color: #f0f0f0;
     color: #333333;
   }
@@ -59,4 +65,16 @@
 
 .hidden {
   display: none;
+}
+
+.primary-font {
+  font-size: 1.5em;
+}
+
+.secondary-font {
+  font-size: 1em;
+}
+
+.tertiary-font {
+  font-size: 0.875em;
 }
