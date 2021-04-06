@@ -15,9 +15,21 @@
       bottom: 0;
       width: 100%;
       text-align: center;
-      .social-tags{
+
+      .social-tags {
         color: #333333;
         zoom: 1.1;
+      }
+    }
+  }
+
+  .mat-nav-list {
+    a {
+      color: #666666;
+
+      &.active {
+        background: rgba(0, 0, 0, 0.04);
+        color: #000000;
       }
     }
   }
