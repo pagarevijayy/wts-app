@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatButton } from '@angular/material/button';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
@@ -10,8 +11,9 @@ import { SourceOfTruth } from 'src/assets/data/in-browser-data';
   templateUrl: './main-nav.component.html',
   styleUrls: ['./main-nav.component.scss']
 })
-export class MainNavComponent implements OnInit {
+export class MainNavComponent implements OnInit, AfterViewInit {
   @ViewChild('drawer') navigationDrawer: MatSidenav;
+  @ViewChild('menuButton') navMenuButton: MatButton;
 
   isHandset$: Observable<boolean> = this._utilService.isHandset$;
   toolbarTitle: string = SourceOfTruth.projectData.projectMainToolBarTitle;
@@ -22,6 +24,12 @@ export class MainNavComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit() {
+    // remove the focus effect from menu button after clicking it.
+    console.log(this.navMenuButton);
+    (<any>this.navMenuButton)._focusMonitor.stopMonitoring(this.navMenuButton._getHostElement());
   }
 
   shareClicked() {

@@ -1,9 +1,9 @@
 <header>
   <mat-toolbar id="mainAppToolbar">
-    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+    <button type="button" aria-label="Toggle sidenav" #menuButton mat-icon-button (click)="drawer.toggle()">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-    <a class="logo-font px-2" [routerLink]="['/scroll']" style="text-decoration: none; color: #333333">{{toolbarTitle}}</a>
+    <a class="logo-font px-2" [routerLink]="['/scroll']" (click)="navigationItemClicked()" style="text-decoration: none; color: #333333">{{toolbarTitle}}</a>
     <span style="flex: 1 1 auto;"></span>
     <button mat-icon-button aria-label="icon-button with share icon" (click)="shareClicked()">
       <mat-icon>share</mat-icon>
@@ -11,15 +11,15 @@
   </mat-toolbar>
 </header>
 <mat-sidenav-container class="sidenav-container" [style.paddingTop.px]="(isHandset$ | async) ? 56 : 64">
-  <mat-sidenav #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  <mat-sidenav [autoFocus]="false" #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [style.paddingTop.px]="(isHandset$ | async) ? 56 : 64" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false">
 
     <mat-nav-list (click)="navigationItemClicked()">
-      <a mat-list-item [routerLink]="['/discipline']">Discipline</a>
-      <a mat-list-item [routerLink]="['/scroll']">The Scroll</a>
-      <a mat-list-item [routerLink]="['/community']">Community</a>
-      <a mat-list-item [routerLink]="['/recommended-books']">Recommended Books</a>
+      <a mat-list-item [routerLink]="['/discipline']" routerLinkActive="active">Discipline</a>
+      <a mat-list-item [routerLink]="['/scroll']" routerLinkActive="active">The Scroll</a>
+      <a mat-list-item [routerLink]="['/community']" routerLinkActive="active">Community</a>
+      <a mat-list-item [routerLink]="['/recommended-books']" routerLinkActive="active">Recommended Books</a>
       <!-- <a mat-list-item [routerLink]="['/other']">Other</a> -->
     </mat-nav-list>
 
