@@ -1,7 +1,7 @@
 {
-  "name": "#wethesapiens",
-  "short_name": "#wethesapiens",
-  "theme_color": "#3F51B5",
+  "name": "We The Sapiens",
+  "short_name": "We The Sapiens",
+  "theme_color": "#fafafa",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
