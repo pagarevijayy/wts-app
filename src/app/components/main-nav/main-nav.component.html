@@ -15,7 +15,7 @@
     [style.paddingTop.px]="(isHandset$ | async) ? 56 : 64" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false">
 
-    <mat-nav-list (click)="navigationItemClicked()">
+    <mat-nav-list (click)="navigationItemClicked()" style="padding-top: 0;">
       <a mat-list-item [routerLink]="['/discipline']" routerLinkActive="active">Discipline</a>
       <a mat-list-item [routerLink]="['/scroll']" routerLinkActive="active">The Scroll</a>
       <a mat-list-item [routerLink]="['/community']" routerLinkActive="active">Community</a>
