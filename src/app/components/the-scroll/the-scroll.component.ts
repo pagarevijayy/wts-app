@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { Observable } from 'rxjs';
 import { UtilsService } from 'src/app/services';
 import { IdeaQuotes } from 'src/assets/data/in-browser-data';
-
 
 @Component({
   selector: 'app-the-scroll',
@@ -13,8 +13,11 @@ export class TheScrollComponent implements OnInit {
   @ViewChild('leftChevron', { read: ElementRef }) previousView: ElementRef;
   @ViewChild('rightChevron', { read: ElementRef }) nextView: ElementRef;
 
+  isHandset$: Observable<boolean> = this._utilService.isHandset$;
+
   // constant for swipe action: left or right
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
+  gestureInstruction: string = "Swipe or use Arrow Keys";
 
   // our list of avatars
   viewContent: Array<any> = IdeaQuotes.ideaQuotesData;
@@ -32,6 +35,19 @@ export class TheScrollComponent implements OnInit {
       this.viewContent[0].visible = true;
     }
 
+    // gesture instruction
+    this.isHandset$.subscribe(isMobileDvice => {
+      if (isMobileDvice) {
+        this.gestureInstruction = "Swipe"
+      } else {
+        this.gestureInstruction = "Use Arrow keys"
+      }
+    });
+
+    // hide gesture message
+    setTimeout(function () {
+      document.getElementById('gestureMessage').classList.add('fadeout');
+    }, 10000);
   }
 
 
@@ -90,7 +106,6 @@ export class TheScrollComponent implements OnInit {
     }, 300);
 
   }
-
 
   @HostListener('document:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
