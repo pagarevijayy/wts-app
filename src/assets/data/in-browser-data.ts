@@ -11,7 +11,7 @@ export class IdeaQuotes {
       viewImage: 'https://pbs.twimg.com/media/ExGzBl_UUAA3qIS?format=jpg&name=medium',
       viewPrimaryContent: `"There’s nothing quite as frightening as someone who knows they are right."`,
       viewSecondaryContent: 'Michael Faraday FRS was an English scientist who contributed to the study of electromagnetism and electrochemistry.',
-      visible: true
+      visible: false
     },
     {
       viewAuthor: 'George Carlin',

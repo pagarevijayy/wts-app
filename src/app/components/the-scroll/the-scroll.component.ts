@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { UtilsService } from 'src/app/services';
 import { IdeaQuotes } from 'src/assets/data/in-browser-data';
 
 
@@ -16,11 +17,21 @@ export class TheScrollComponent implements OnInit {
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
 
   // our list of avatars
-  viewContent = IdeaQuotes.ideaQuotesData;
+  viewContent: Array<any> = IdeaQuotes.ideaQuotesData;
 
-  constructor() { }
+  constructor(
+    private _utilService: UtilsService,
+  ) { }
 
   ngOnInit(): void {
+    // shuffle viewContent array for dynamism
+    this.viewContent = this._utilService.shuffleArrayRandomly(this.viewContent);
+
+    //make first element visible
+    if (this.viewContent?.length > 0) {
+      this.viewContent[0].visible = true;
+    }
+
   }
 
 
