@@ -38,98 +38,91 @@ export class IdeaQuotes {
       viewAuthor: 'J. R. R. Tolkien',
       viewImage: 'https://pbs.twimg.com/media/ExK9ou7VoAI1Hu6?format=jpg&name=small',
       viewPrimaryContent: `"I do not love the bright sword for its sharpness, nor the arrow for its swiftness, nor the warrior for his glory. I love only that which they defend."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: 'An English writer, poet, philologist, and academic, best known as the author of the high fantasy works The Hobbit and The Lord of the Rings.',
       visible: false
     },
     {
       viewAuthor: 'Jiddu Krishnamurti',
       viewImage: 'https://pbs.twimg.com/media/ExGjSOHUYAYBUv7?format=jpg&name=small',
       viewPrimaryContent: `"Freedom from the desire for an answer is essential to the understanding of a problem." `,
-      viewSecondaryContent: '',
+      viewSecondaryContent: 'Jiddu Krishnamurti was a philosopher, speaker and writer. In his early life, he was groomed to be the new World Teacher, but later rejected this mantle and withdrew from the Theosophy organization behind it.',
       visible: false
     },
     {
       viewAuthor: 'Leo Tolstoy',
       viewImage: 'https://pbs.twimg.com/media/Ew1f147VEAYBNrb?format=jpg&name=small',
       viewPrimaryContent: `"Wrong does not cease to be wrong because the majority share in it."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: 'Russian writer who is regarded as one of the greatest authors of all time. He received nominations for the Nobel Prize in Literature every year from 1902 to 1906 and for the Nobel Peace Prize in 1901, 1902, and 1909.',
       visible: false
     },
     {
       viewAuthor: 'Carl Jung',
       viewImage: 'https://pbs.twimg.com/media/ExEGv3XVoAEQpq7?format=jpg&name=small',
       viewPrimaryContent: `"Everything that irritates us about others can lead us to an understanding of ourselves." `,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `Carl Gustav Jung, was a Swiss psychiatrist and psychoanalyst who founded analytical psychology. Jung's work has been influential in the fields of psychiatry, anthropology, archaeology, literature, philosophy and religious studies.`,
       visible: false
     },
     {
       viewAuthor: 'Pablo Neruda',
       viewImage: 'https://pbs.twimg.com/media/EwqLkvgVoAcgaQc?format=jpg&name=small',
       viewPrimaryContent: `"You can cut all the flowers but you cannot keep Spring from coming."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `Pablo Neruda, was a Chilean poet-diplomat and politician who won the Nobel Prize for Literature in 1971.`,
       visible: false
     },
     {
       viewAuthor: 'John D. Rockefeller',
       viewImage: 'https://pbs.twimg.com/media/EwSgzmmVgAoJEtL?format=jpg&name=360x360',
       viewPrimaryContent: `"A friendship founded on business is better than a business founded on friendship."`,
-      viewSecondaryContent: '',
-      visible: false
-    },
-    {
-      viewAuthor: 'Daniel Kahneman',
-      viewImage: 'https://pbs.twimg.com/media/EwfzXUBVIAIbct2?format=jpg&name=360x360',
-      viewPrimaryContent: `"Intelligence is not only the ability to reason; it is also the ability to find relevant material in memory and to deploy attention when needed." `,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `He is widely considered the wealthiest American of all time and the richest person in modern history. `,
       visible: false
     },
     {
       viewAuthor: 'Henry David Thoreau',
       viewImage: 'https://pbs.twimg.com/media/Ev20XyaU8AEf4Kx?format=jpg&name=small',
       viewPrimaryContent: `"Disobedience is the true foundation of liberty. The obedient must be slaves."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `A leading transcendentalist, he is best known for his book Walden, a reflection upon simple living in natural surroundings, and his essay "Civil Disobedience", an argument for disobedience to an unjust state.`,
       visible: false
     },
     {
       viewAuthor: 'Karl Popper',
       viewImage: 'https://pbs.twimg.com/media/Evn1TgKVEAESCR8?format=jpg&name=small',
       viewPrimaryContent: `"Those who promise us paradise on earth never produced anything but a hell."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `One of the 20th century's most influential philosophers of science, Popper is known for his rejection of the classical inductivist views on the scientific method in favour of empirical falsification.`,
       visible: false
     },
     {
       viewAuthor: 'Marcus Aurelius',
       viewImage: 'https://pbs.twimg.com/media/EvlZxpLU8AA_q7U?format=jpg&name=small',
       viewPrimaryContent: `"Reject your sense of injury and the injury itself disappears."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `Marcus Aurelius was the last of the Five Good Emperors of Rome. He has symbolized the Golden Age of the Roman Empire for many generations in the West.`,
       visible: false
     },
     {
       viewAuthor: 'Henry Ford',
       viewImage: 'https://pbs.twimg.com/media/EvYLIZfUcAMGaKw?format=jpg&name=small',
       viewPrimaryContent: `"You can't build a reputation on what you are going to do."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `Henry Ford was an American industrialist and business magnate, founder of the Ford Motor Company.`,
       visible: false
     },
     {
       viewAuthor: 'Seneca',
       viewImage: 'https://pbs.twimg.com/media/EvSn9bzUUAM38cH?format=jpg&name=small',
       viewPrimaryContent: `"It is not the man who has too little, but the man who craves more, that is poor." `,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `A Roman Stoic philosopher`,
       visible: false
     },
     {
       viewAuthor: 'George Orwell',
       viewImage: 'https://pbs.twimg.com/media/EvJL-q-UcAAew4g?format=jpg&name=small',
       viewPrimaryContent: `"Autobiography is only to be trusted when it reveals something disgraceful."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `His work is characterised by lucid prose, biting social criticism, opposition to totalitarianism, and outspoken support of democratic socialism.`,
       visible: false
     },
     {
       viewAuthor: 'Arthur Schopenhauer',
       viewImage: 'https://pbs.twimg.com/media/EuSIVUUUUAMGKxp?format=jpg&name=small',
       viewPrimaryContent: `"The person who writes for fools is always sure of a large audience."`,
-      viewSecondaryContent: '',
+      viewSecondaryContent: `Arthur Schopenhauer was a German philosopher. He is best known for his 1818 work The World as Will and Representation, which characterizes the phenomenal world as the product of a blind and insatiable noumenal will.`,
       visible: false
     }
   ];
