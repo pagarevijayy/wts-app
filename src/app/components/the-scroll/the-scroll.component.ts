@@ -1,5 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UtilsService } from 'src/app/services';
+import { IdeaQuotes } from 'src/assets/data/in-browser-data';
 
 @Component({
   selector: 'app-the-scroll',
@@ -10,37 +13,41 @@ export class TheScrollComponent implements OnInit {
   @ViewChild('leftChevron', { read: ElementRef }) previousView: ElementRef;
   @ViewChild('rightChevron', { read: ElementRef }) nextView: ElementRef;
 
+  isHandset$: Observable<boolean> = this._utilService.isHandset$;
+
   // constant for swipe action: left or right
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
+  gestureInstruction: string = "Swipe or use Arrow Keys";
 
   // our list of avatars
-  viewContent = [
-    {
-      viewAuthor: 'Michael Faraday',
-      viewImage: 'https://pbs.twimg.com/media/ExGzBl_UUAA3qIS?format=jpg&name=medium',
-      viewPrimaryContent: `"There’s nothing quite as frightening as someone who knows they are right."`,
-      viewSecondaryContent: 'Michael Faraday FRS was an English scientist who contributed to the study of electromagnetism and electrochemistry.',
-      visible: true
-    },
-    {
-      viewAuthor: 'George Carlin',
-      viewImage: 'https://pbs.twimg.com/media/EyCLlQfVEAARujy?format=jpg&name=small',
-      viewPrimaryContent: `"Scratch any cynic and you will find a disappointed idealist." `,
-      viewSecondaryContent: `Regarded as one of the most important and influential stand-up comics of all time, he was dubbed "the dean of counterculture comedians".`,
-      visible: false
-    },
-    {
-      viewAuthor: ' Thomas Edison',
-      viewImage: 'https://pbs.twimg.com/media/Exq2Fk6UUAEDqCq?format=jpg&name=small',
-      viewPrimaryContent: `"The chief function of the body is to carry the brain around."`,
-      viewSecondaryContent: 'Thomas Edison, American inventor who, singly or jointly, held a world-record 1,093 patents and created the world’s first industrial research laboratory.',
-      visible: false
-    }
-  ];
+  viewContent: Array<any> = IdeaQuotes.ideaQuotesData;
 
-  constructor() { }
+  constructor(
+    private _utilService: UtilsService,
+  ) { }
 
   ngOnInit(): void {
+    // shuffle viewContent array for dynamism
+    this.viewContent = this._utilService.shuffleArrayRandomly(this.viewContent);
+
+    //make first element visible
+    if (this.viewContent?.length > 0) {
+      this.viewContent[0].visible = true;
+    }
+
+    // gesture instruction
+    this.isHandset$.subscribe(isMobileDvice => {
+      if (isMobileDvice) {
+        this.gestureInstruction = "Swipe"
+      } else {
+        this.gestureInstruction = "Use Arrow keys"
+      }
+    });
+
+    // hide gesture message
+    setTimeout(function () {
+      document.getElementById('gestureMessage').classList.add('fadeout');
+    }, 10000);
   }
 
 
@@ -99,7 +106,6 @@ export class TheScrollComponent implements OnInit {
     }, 300);
 
   }
-
 
   @HostListener('document:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {

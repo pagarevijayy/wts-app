@@ -28,7 +28,6 @@ export class MainNavComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     // remove the focus effect from menu button after clicking it.
-    console.log(this.navMenuButton);
     (<any>this.navMenuButton)._focusMonitor.stopMonitoring(this.navMenuButton._getHostElement());
   }
 
